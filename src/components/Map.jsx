@@ -1,27 +1,58 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 import styles from "./Map.module.css";
+import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import { useEffect, useState } from "react";
+import { useCities } from "../contexts/CitiesContext";
 
 function Map() {
-  const [searchParam, setSearchParam] = useSearchParams();
-  const navigate = useNavigate();
-  const lat = searchParam.get("lat");
-  const lng = searchParam.get("lng");
+  const { cities } = useCities();
+  const [searchParam] = useSearchParams();
+  const [mapPosition, setMapPosition] = useState([40, 0]);
+
+  const mapLat = searchParam.get("lat");
+  const mapLng = searchParam.get("lng");
+
+  useEffect(
+    function () {
+      if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
+    },
+    [mapLat, mapLng]
+  );
 
   return (
-    <div className={styles.mapContainer} onClick={() => navigate("form")}>
-      <h1>Map</h1>
-      <p>
-        Position {lat}, {lng}
-      </p>
-      <button
-        onClick={() => {
-          setSearchParam({ lat: 20, lng: 10 });
-        }}
+    <div className={styles.mapContainer}>
+      <MapContainer
+        className={styles.map}
+        center={mapPosition}
+        zoom={6}
+        scrollWheelZoom={true}
       >
-        change param
-      </button>
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
+        />
+
+        {cities.map((city) => (
+          <Marker
+            key={city.id}
+            position={[city.position.lat, city.position.lng]}
+          >
+            <Popup>
+              <span>{city.emoji}</span> <span>{city.cityName}</span>
+            </Popup>
+          </Marker>
+        ))}
+
+        <ChangeCenter position={mapPosition} />
+      </MapContainer>
     </div>
   );
+}
+
+function ChangeCenter({ position }) {
+  const map = useMap();
+  map.setView(position);
+  return null;
 }
 
 export default Map;
