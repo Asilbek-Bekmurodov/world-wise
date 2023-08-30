@@ -1,16 +1,28 @@
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./Map.module.css";
-import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import {
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  useMap,
+  useMapEvents,
+} from "react-leaflet";
 import { useEffect, useState } from "react";
 import { useCities } from "../contexts/CitiesContext";
+import { useGeolocation } from "../hooks/useGeolocation";
+import Button from "./Button";
+import { useUrlLocation } from "../hooks/useUrlLocation";
 
 function Map() {
   const { cities } = useCities();
-  const [searchParam] = useSearchParams();
   const [mapPosition, setMapPosition] = useState([40, 0]);
-
-  const mapLat = searchParam.get("lat");
-  const mapLng = searchParam.get("lng");
+  const [mapLng, mapLat] = useUrlLocation();
+  const {
+    getPosition,
+    isLoading: isLoadingPosition,
+    position: geoPosition,
+  } = useGeolocation();
 
   useEffect(
     function () {
@@ -19,8 +31,22 @@ function Map() {
     [mapLat, mapLng]
   );
 
+  useEffect(
+    function () {
+      if (geoPosition) {
+        setMapPosition([geoPosition.lat, geoPosition.lng]);
+      }
+    },
+    [geoPosition]
+  );
+
   return (
     <div className={styles.mapContainer}>
+      {!geoPosition && (
+        <Button onclick={getPosition} type="position">
+          {isLoadingPosition ? "Loading..." : "Use Your Position"}
+        </Button>
+      )}
       <MapContainer
         className={styles.map}
         center={mapPosition}
@@ -44,6 +70,7 @@ function Map() {
         ))}
 
         <ChangeCenter position={mapPosition} />
+        <DetectClick />
       </MapContainer>
     </div>
   );
@@ -53,6 +80,13 @@ function ChangeCenter({ position }) {
   const map = useMap();
   map.setView(position);
   return null;
+}
+
+function DetectClick() {
+  const navigate = useNavigate();
+  useMapEvents({
+    click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
+  });
 }
 
 export default Map;
