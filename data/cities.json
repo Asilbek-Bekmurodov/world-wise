@@ -35,6 +35,138 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Tashkent",
+      "country": "Uzbekistan",
+      "date": "2023-09-02T11:54:28.271Z",
+      "emoji": "🇺🇿",
+      "notes": "it's Uzbekistan TAshkent\n",
+      "position": {
+        "lat": "41.306439718090154",
+        "lng": "69.24974441528322"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Lacin",
+      "country": "Azerbaijan",
+      "date": "2023-09-02T11:55:02.502Z",
+      "emoji": "🇦🇿",
+      "notes": "very good ",
+      "position": {
+        "lat": "39.707186656826565",
+        "lng": "46.40625000000001"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Zhukovsky",
+      "country": "Russian Federation (the)",
+      "date": "2023-09-02T11:55:10.815Z",
+      "emoji": "🇷🇺",
+      "notes": "I like Zhukovsky\n",
+      "position": {
+        "lat": "55.57834467218206",
+        "lng": "38.14453125000001"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Kochkor",
+      "country": "Kyrgyzstan",
+      "date": "2023-09-02T11:55:53.449Z",
+      "emoji": "🇰🇬",
+      "notes": "Kirgizistan\n",
+      "position": {
+        "lat": "42.06560675405716",
+        "lng": "75.95947265625"
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Aksu-Ayuly",
+      "country": "Kazakhstan",
+      "date": "2023-09-02T11:56:20.143Z",
+      "emoji": "🇰🇿",
+      "notes": "fadfa",
+      "position": {
+        "lat": "47.11499982620772",
+        "lng": "71.93847656250001"
+      },
+      "id": 98443202
+    },
+    {
+      "cityName": "la Massana",
+      "country": "Andorra",
+      "date": "2023-09-02T11:58:14.868Z",
+      "emoji": "🇦🇩",
+      "notes": "i like this place  🌚\n",
+      "position": {
+        "lat": "42.54498667313236",
+        "lng": "1.4611816406250002"
+      },
+      "id": 98443203
+    },
+    {
+      "cityName": "Bagneres-de-Bigorre",
+      "country": "France",
+      "date": "2023-09-02T11:58:46.817Z",
+      "emoji": "🇫🇷",
+      "notes": "",
+      "position": {
+        "lat": "42.98857645832184",
+        "lng": "0.06591796875000001"
+      },
+      "id": 98443204
+    },
+    {
+      "cityName": "Gardonne",
+      "country": "France",
+      "date": "2023-09-02T11:58:49.297Z",
+      "emoji": "🇫🇷",
+      "notes": "",
+      "position": {
+        "lat": "44.83249999349062",
+        "lng": "0.32958984375000006"
+      },
+      "id": 98443205
+    },
+    {
+      "cityName": "Saint-Nicolas-des-Biefs",
+      "country": "France",
+      "date": "2023-09-02T11:58:53.168Z",
+      "emoji": "🇫🇷",
+      "notes": "",
+      "position": {
+        "lat": "46.03510927947337",
+        "lng": "3.8012695312500004"
+      },
+      "id": 98443206
+    },
+    {
+      "cityName": "Momignies",
+      "country": "Belgium",
+      "date": "2023-09-02T11:59:01.798Z",
+      "emoji": "🇧🇪",
+      "notes": "",
+      "position": {
+        "lat": "49.986552130506176",
+        "lng": "4.218750000000001"
+      },
+      "id": 98443207
+    },
+    {
+      "cityName": "Werne",
+      "country": "Germany",
+      "date": "2023-09-02T11:59:05.396Z",
+      "emoji": "🇩🇪",
+      "notes": "",
+      "position": {
+        "lat": "51.67936786087718",
+        "lng": "7.624511718750001"
+      },
+      "id": 98443208
     }
   ]
 }

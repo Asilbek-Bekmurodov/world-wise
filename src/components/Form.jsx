@@ -10,6 +10,8 @@ import Spinner from "./Spinner";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
+import { useCities } from "../contexts/CitiesContext";
+import { useNavigate } from "react-router-dom";
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
@@ -23,11 +25,13 @@ const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
 function Form() {
   const [lng, lat] = useUrlLocation();
+  const { createCity, isLoading } = useCities();
+  const navigate = useNavigate();
   const [cityName, setCityName] = useState("");
   const [country, setCountry] = useState("");
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingPosition, setIsLoadingPosition] = useState(false);
   const [error, setError] = useState("");
   const [emoji, setEmoji] = useState("");
 
@@ -35,7 +39,7 @@ function Form() {
     function () {
       async function fetchCityData() {
         try {
-          setIsLoading(true);
+          setIsLoadingPosition(true);
           setError("");
           const res = await fetch(
             `${BASE_URL}?latitude=${lat}&longitude=${lng}`
@@ -51,7 +55,7 @@ function Form() {
         } catch (err) {
           setError(err.message);
         } finally {
-          setIsLoading(false);
+          setIsLoadingPosition(false);
         }
       }
       fetchCityData();
@@ -59,13 +63,35 @@ function Form() {
     [lat, lng]
   );
 
-  if (isLoading) return <Spinner />;
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    if (!date || !cityName) return;
+    const newCity = {
+      cityName,
+      country,
+      date,
+      emoji,
+      notes,
+      position: {
+        lat,
+        lng,
+      },
+    };
+    await createCity(newCity);
+    navigate("/app");
+  }
+
+  if (isLoadingPosition) return <Spinner />;
   if (!lat && !lng)
     return <Message message={"Start by clicking somewhere on the map "} />;
   if (error) return <Message message={error} />;
 
   return (
-    <form className={styles.form}>
+    <form
+      className={`${styles.form} ${isLoading ? styles.loading : ""}`}
+      onSubmit={handleSubmit}
+    >
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input
