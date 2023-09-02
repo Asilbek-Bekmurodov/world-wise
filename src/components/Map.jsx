@@ -39,7 +39,7 @@ function Map() {
     },
     [geoPosition]
   );
-
+  console.log(cities);
   return (
     <div className={styles.mapContainer}>
       {!geoPosition && (

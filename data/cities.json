@@ -1,172 +1,64 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
       "cityName": "Madrid",
       "country": "Spain",
+      "date": "2023-09-03T21:31:12.226Z",
       "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": "40.396764305572056",
+        "lng": "-3.6254882812500004"
       },
-      "id": 17806751
+      "id": 1
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
-    },
-    {
-      "cityName": "Tashkent",
-      "country": "Uzbekistan",
-      "date": "2023-09-02T11:54:28.271Z",
-      "emoji": "🇺🇿",
-      "notes": "it's Uzbekistan TAshkent\n",
-      "position": {
-        "lat": "41.306439718090154",
-        "lng": "69.24974441528322"
-      },
-      "id": 98443198
-    },
-    {
-      "cityName": "Lacin",
-      "country": "Azerbaijan",
-      "date": "2023-09-02T11:55:02.502Z",
-      "emoji": "🇦🇿",
-      "notes": "very good ",
-      "position": {
-        "lat": "39.707186656826565",
-        "lng": "46.40625000000001"
-      },
-      "id": 98443199
-    },
-    {
-      "cityName": "Zhukovsky",
-      "country": "Russian Federation (the)",
-      "date": "2023-09-02T11:55:10.815Z",
-      "emoji": "🇷🇺",
-      "notes": "I like Zhukovsky\n",
-      "position": {
-        "lat": "55.57834467218206",
-        "lng": "38.14453125000001"
-      },
-      "id": 98443200
-    },
-    {
-      "cityName": "Kochkor",
-      "country": "Kyrgyzstan",
-      "date": "2023-09-02T11:55:53.449Z",
-      "emoji": "🇰🇬",
-      "notes": "Kirgizistan\n",
-      "position": {
-        "lat": "42.06560675405716",
-        "lng": "75.95947265625"
-      },
-      "id": 98443201
-    },
-    {
-      "cityName": "Aksu-Ayuly",
-      "country": "Kazakhstan",
-      "date": "2023-09-02T11:56:20.143Z",
-      "emoji": "🇰🇿",
-      "notes": "fadfa",
-      "position": {
-        "lat": "47.11499982620772",
-        "lng": "71.93847656250001"
-      },
-      "id": 98443202
-    },
-    {
-      "cityName": "la Massana",
-      "country": "Andorra",
-      "date": "2023-09-02T11:58:14.868Z",
-      "emoji": "🇦🇩",
-      "notes": "i like this place  🌚\n",
-      "position": {
-        "lat": "42.54498667313236",
-        "lng": "1.4611816406250002"
-      },
-      "id": 98443203
-    },
-    {
-      "cityName": "Bagneres-de-Bigorre",
+      "cityName": "Combovin",
       "country": "France",
-      "date": "2023-09-02T11:58:46.817Z",
+      "date": "2023-09-03T21:31:20.074Z",
       "emoji": "🇫🇷",
       "notes": "",
       "position": {
-        "lat": "42.98857645832184",
-        "lng": "0.06591796875000001"
+        "lat": "44.879228141635274",
+        "lng": "5.097656250000001"
       },
-      "id": 98443204
+      "id": 2
     },
     {
-      "cityName": "Gardonne",
-      "country": "France",
-      "date": "2023-09-02T11:58:49.297Z",
-      "emoji": "🇫🇷",
+      "cityName": "Wycombe",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "date": "2023-09-03T21:31:23.587Z",
+      "emoji": "🇬🇧",
       "notes": "",
       "position": {
-        "lat": "44.83249999349062",
-        "lng": "0.32958984375000006"
+        "lat": "51.63847621195153",
+        "lng": "-0.7470703125000001"
       },
-      "id": 98443205
+      "id": 3
     },
     {
-      "cityName": "Saint-Nicolas-des-Biefs",
-      "country": "France",
-      "date": "2023-09-02T11:58:53.168Z",
-      "emoji": "🇫🇷",
+      "cityName": "Greater London",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "date": "2023-09-03T21:31:29.825Z",
+      "emoji": "🇬🇧",
       "notes": "",
       "position": {
-        "lat": "46.03510927947337",
-        "lng": "3.8012695312500004"
+        "lat": "51.44716034698012",
+        "lng": "-0.16479492187500003"
       },
-      "id": 98443206
+      "id": 4
     },
     {
-      "cityName": "Momignies",
-      "country": "Belgium",
-      "date": "2023-09-02T11:59:01.798Z",
-      "emoji": "🇧🇪",
-      "notes": "",
+      "cityName": "Kinver",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "date": "2023-09-03T21:31:54.908Z",
+      "emoji": "🇬🇧",
+      "notes": "good\n",
       "position": {
-        "lat": "49.986552130506176",
-        "lng": "4.218750000000001"
+        "lat": "52.46939684276205",
+        "lng": "-2.1862792968750004"
       },
-      "id": 98443207
-    },
-    {
-      "cityName": "Werne",
-      "country": "Germany",
-      "date": "2023-09-02T11:59:05.396Z",
-      "emoji": "🇩🇪",
-      "notes": "",
-      "position": {
-        "lat": "51.67936786087718",
-        "lng": "7.624511718750001"
-      },
-      "id": 98443208
+      "id": 5
     }
   ]
 }
