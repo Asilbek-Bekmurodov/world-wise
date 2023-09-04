@@ -37,6 +37,12 @@ function reducer(state, action) {
         currentCity: {},
         isLoading: false,
       };
+
+    case "rejected":
+      return {
+        ...state,
+        error: action.payload,
+      };
     default:
       throw new Error("non expected action");
   }
@@ -57,13 +63,17 @@ function CitiesProvider({ children }) {
         const data = await res.json();
         dispatch({ type: "cities/loaded", payload: data });
       } catch (err) {
-        alert("Something wrong with fetching", err);
+        dispatch({
+          type: "rejected",
+          payload: "There was error with loaded cities!!!",
+        });
       }
     }
     fetchCities();
   }, []);
 
   async function getCity(id) {
+    if (Number(id) === currentCity.id) return;
     dispatch({ type: "loading" });
 
     try {
@@ -71,7 +81,10 @@ function CitiesProvider({ children }) {
       const data = await res.json();
       dispatch({ type: "city/loaded", payload: data });
     } catch (err) {
-      console.log("Something wrong with fetching", err);
+      dispatch({
+        type: "rejected",
+        payload: "There was error with loaded city!!!",
+      });
     }
   }
 
@@ -82,7 +95,10 @@ function CitiesProvider({ children }) {
       await fetch(`${BASE_URL}/cities/${id}`, { method: "DELETE" });
       dispatch({ type: "city/deleted", payload: id });
     } catch (err) {
-      console.log("Something wrong with deleting", err);
+      dispatch({
+        type: "rejected",
+        payload: "There was error with deleted city!!!",
+      });
     }
   }
 
@@ -100,7 +116,10 @@ function CitiesProvider({ children }) {
       const data = await res.json();
       dispatch({ type: "city/created", payload: data });
     } catch (err) {
-      console.log("Something wrong with adding", err);
+      dispatch({
+        type: "rejected",
+        payload: "There was error with created city !!!",
+      });
     }
   }
 
@@ -113,6 +132,7 @@ function CitiesProvider({ children }) {
         currentCity,
         createCity,
         deleteCity,
+        error,
       }}
     >
       {children}

@@ -1,64 +1,28 @@
 {
   "cities": [
     {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "date": "2023-09-03T21:31:12.226Z",
-      "emoji": "🇪🇸",
-      "notes": "",
+      "cityName": "Spoleto",
+      "country": "Italy",
+      "date": "2023-09-04T13:13:20.509Z",
+      "emoji": "🇮🇹",
+      "notes": "ITalyyyy\n",
       "position": {
-        "lat": "40.396764305572056",
-        "lng": "-3.6254882812500004"
+        "lat": "42.72280375732727",
+        "lng": "12.7880859375"
       },
       "id": 1
     },
     {
-      "cityName": "Combovin",
-      "country": "France",
-      "date": "2023-09-03T21:31:20.074Z",
-      "emoji": "🇫🇷",
+      "cityName": "Moscow",
+      "country": "Russian Federation (the)",
+      "date": "2023-09-04T13:16:40.026Z",
+      "emoji": "🇷🇺",
       "notes": "",
       "position": {
-        "lat": "44.879228141635274",
-        "lng": "5.097656250000001"
+        "lat": "55.70235509327093",
+        "lng": "37.57324218750001"
       },
       "id": 2
-    },
-    {
-      "cityName": "Wycombe",
-      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "date": "2023-09-03T21:31:23.587Z",
-      "emoji": "🇬🇧",
-      "notes": "",
-      "position": {
-        "lat": "51.63847621195153",
-        "lng": "-0.7470703125000001"
-      },
-      "id": 3
-    },
-    {
-      "cityName": "Greater London",
-      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "date": "2023-09-03T21:31:29.825Z",
-      "emoji": "🇬🇧",
-      "notes": "",
-      "position": {
-        "lat": "51.44716034698012",
-        "lng": "-0.16479492187500003"
-      },
-      "id": 4
-    },
-    {
-      "cityName": "Kinver",
-      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "date": "2023-09-03T21:31:54.908Z",
-      "emoji": "🇬🇧",
-      "notes": "good\n",
-      "position": {
-        "lat": "52.46939684276205",
-        "lng": "-2.1862792968750004"
-      },
-      "id": 5
     }
   ]
 }
