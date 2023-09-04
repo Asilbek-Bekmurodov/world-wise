@@ -4,9 +4,10 @@ import Spinner from "./Spinner";
 import Message from "./Message";
 import { useCities } from "../contexts/CitiesContext";
 function CityList() {
-  const { isLoading, cities } = useCities();
+  const { isLoading, cities, error } = useCities();
   if (isLoading) return <Spinner />;
 
+  if (error) return <Message message={error} />;
   if (!cities.length)
     return (
       <Message

@@ -42,6 +42,7 @@ function reducer(state, action) {
       return {
         ...state,
         error: action.payload,
+        isLoading: false,
       };
     default:
       throw new Error("non expected action");

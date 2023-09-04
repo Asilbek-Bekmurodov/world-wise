@@ -23,6 +23,30 @@
         "lng": "37.57324218750001"
       },
       "id": 2
+    },
+    {
+      "cityName": "Tashkent",
+      "country": "Uzbekistan",
+      "date": "2023-09-04T13:48:56.778Z",
+      "emoji": "🇺🇿",
+      "notes": "",
+      "position": {
+        "lat": "41.3108238809182",
+        "lng": "69.33471679687501"
+      },
+      "id": 3
+    },
+    {
+      "cityName": "Canillo",
+      "country": "Andorra",
+      "date": "2023-09-04T13:51:30.929Z",
+      "emoji": "🇦🇩",
+      "notes": "",
+      "position": {
+        "lat": "42.56926437219384",
+        "lng": "1.77978515625"
+      },
+      "id": 4
     }
   ]
 }
